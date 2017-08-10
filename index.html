@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>angular</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body ng-app="myapp" ng-controller="mycontroller" >
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <script src= "app.js"></script>
+<script src= "controllers/mycontroller.js"></script>
+<script src= "controllers\datafactory.js"></script>
+
+
+<!--
+ code starts from here
+.
+. -->
+<div class = "jumbotron text-center">
+<h1>{{name + ', please Welcome to our site'}}</h1>
+</div>
+
+<div class ="well" ng-repeat="dat in data">
+
+<h1>     TYPE: {{dat.type}} </h1>
+<p><strong>Address: {{dat.address}}</strong></p>
+<p><strong> Price: {{dat.price | currency}}</strong></p>
+<p><strong>Description: {{dat.description}}</strong></p>
+
+
+</div>
+
+</body>
+
+
+
+</html>
